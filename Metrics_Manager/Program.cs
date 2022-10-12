@@ -1,3 +1,5 @@
+using Metrics_Manager.Models;
+
 namespace Metrics_Manager
 {
     public class Program
@@ -7,6 +9,9 @@ namespace Metrics_Manager
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+
+            builder.Services.AddSingleton<AgentPool>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
